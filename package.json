@@ -1,0 +1,16 @@
+{
+  "name": "impulsaweb-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pagina estatica para vender sitios web y mostrar una tienda demo.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "start": "pnpm dev",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}
