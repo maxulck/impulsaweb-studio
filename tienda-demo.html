@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Urban Norte | Tienda demo</title>
-  <meta name="description" content="Ejemplo estatico de tienda tipo catalogo creado por ImpulsaWeb Studio.">
+  <meta name="description" content="Ejemplo estático de tienda tipo catálogo creado por ImpulsaWeb Studio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,7 +13,12 @@
 <body class="demo-body">
   <header class="store-header">
     <a class="store-logo" href="tienda-demo.html">Urban Norte</a>
-    <nav class="nav store-nav" aria-label="Navegacion tienda demo">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="store-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav store-nav" id="store-nav" aria-label="Navegacion tienda demo">
       <a href="#productos">Productos</a>
       <a href="#oferta">Oferta</a>
       <a href="#contacto-demo">Contacto</a>
@@ -25,9 +30,9 @@
     <section class="store-hero">
       <div class="store-hero-text">
         <p class="eyebrow">Tienda demo estatica</p>
-        <h1>Ropa urbana con estilo limpio y facil de comprar.</h1>
-        <p>Esta pagina es un ejemplo de como podria verse una tienda catalogo para un cliente: productos destacados, precios, promociones y contacto directo.</p>
-        <a class="btn btn-primary" href="#productos">Ver catalogo</a>
+        <h1>Ropa urbana con estilo limpio y fácil de comprar.</h1>
+        <p>Esta página es un ejemplo de cómo podría verse una tienda catálogo para un cliente: productos destacados, precios, promociones y contacto directo.</p>
+        <a class="btn btn-primary" href="#productos">Ver catálogo</a>
       </div>
       <div class="lookbook" aria-label="Coleccion destacada">
         <div class="look look-one"></div>
@@ -45,7 +50,7 @@
 
     <section class="section store-section" id="productos">
       <div class="section-heading compact">
-        <p class="eyebrow">Catalogo</p>
+        <p class="eyebrow">Catálogo</p>
         <h2>Productos destacados</h2>
       </div>
       <div class="product-grid">
@@ -64,7 +69,7 @@
         <article class="product-card">
           <div class="product-art product-three"></div>
           <h3>Zapatilla Street Blanca</h3>
-          <p>Suela comoda y diseno minimal para uso diario.</p>
+          <p>Suela cómoda y diseño minimal para uso diario.</p>
           <strong>$32.990</strong>
         </article>
         <article class="product-card">
@@ -98,5 +103,27 @@
       </div>
     </section>
   </main>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+  </script>
 </body>
 </html>

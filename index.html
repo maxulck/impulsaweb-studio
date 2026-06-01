@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ImpulsaWeb Studio | Paginas web para negocios</title>
-  <meta name="description" content="Paginas web modernas para emprendedores, tiendas y negocios. Precios conversables y contacto directo.">
+  <title>ImpulsaWeb Studio | Páginas web para negocios</title>
+  <meta name="description" content="Páginas web modernas para emprendedores, tiendas y negocios. Precios conversables y contacto directo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,9 +16,15 @@
       <span class="brand-mark">IW</span>
       <span>ImpulsaWeb Studio</span>
     </a>
-    <nav class="nav" aria-label="Navegacion principal">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="main-nav" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
-      <a href="#quienes-somos">Quienes somos</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+      <a href="#incluye">Qué incluye</a>
       <a href="#precios">Precios</a>
       <a href="#proyectos">Ejemplos</a>
       <a href="#comentarios">Comentarios</a>
@@ -28,12 +34,12 @@
 
   <main>
     <section class="hero">
-      <img src="assets/hero-webstudio.png" alt="Notebook y telefono mostrando disenos de tiendas online modernas" class="hero-image">
+      <img src="assets/hero-webstudio.png" alt="Notebook y teléfono mostrando diseños de tiendas online modernas" class="hero-image">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">Paginas web modernas para vender mejor</p>
+        <p class="eyebrow">Páginas web modernas para vender mejor</p>
         <h1>Tu negocio puede verse profesional desde el primer clic.</h1>
-        <p class="hero-copy">Creo paginas rapidas, claras y bonitas para emprendedores, tiendas, servicios y marcas personales. Disenos pensados para generar confianza, mostrar lo mejor de tu negocio y facilitar que tus clientes te contacten.</p>
+        <p class="hero-copy">Creo páginas rápidas, claras y bonitas para emprendedores, tiendas, servicios y marcas personales. Diseños pensados para generar confianza, mostrar lo mejor de tu negocio y facilitar que tus clientes te contacten.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20cotizar%20una%20pagina%20web." target="_blank" rel="noopener">Cotizar ahora</a>
           <a class="btn btn-secondary" href="tienda-demo.html">Ver tienda demo</a>
@@ -43,100 +49,159 @@
 
     <section class="trust-strip" aria-label="Beneficios principales">
       <div>
-        <strong>Diseno adaptable</strong>
+        <strong>Diseño adaptable</strong>
         <span>Se ve bien en celular, tablet y computador.</span>
       </div>
       <div>
         <strong>Entrega ordenada</strong>
-        <span>Paginas listas para mostrar a clientes.</span>
+        <span>Páginas listas para mostrar a clientes.</span>
       </div>
       <div>
-        <strong>Atencion directa</strong>
-        <span>Hablamos claro y ajustamos segun tu idea.</span>
+        <strong>Atención directa</strong>
+        <span>Hablamos claro y ajustamos según tu idea.</span>
       </div>
     </section>
 
     <section class="section about-section" id="quienes-somos">
       <div class="about-layout">
         <div class="section-heading">
-          <p class="eyebrow">Quienes somos</p>
+          <p class="eyebrow">Quiénes somos</p>
           <h2>Un estudio digital cercano para negocios que quieren verse mejor.</h2>
-          <p>ImpulsaWeb Studio nace para ayudar a emprendedores, tiendas y servicios locales a tener una presencia online clara, moderna y facil de compartir. La idea es simple: que tu pagina explique bien lo que haces, genere confianza y lleve al cliente a contactarte sin dar vueltas.</p>
+          <p>ImpulsaWeb Studio nace para ayudar a emprendedores, tiendas y servicios locales a tener una presencia online clara, moderna y fácil de compartir. La idea es simple: que tu página explique bien lo que haces, genere confianza y lleve al cliente a contactarte sin dar vueltas.</p>
+          <p>Trabajo con una mirada práctica: ordenar la información, destacar lo importante y crear una experiencia cómoda para personas que entran desde el celular. No se trata solo de que la página se vea bonita, sino de que ayude a vender, responder dudas y mostrar que tu negocio es serio.</p>
+          <div class="about-stats" aria-label="Puntos fuertes de ImpulsaWeb Studio">
+            <div><strong>100%</strong><span>adaptable a celular</span></div>
+            <div><strong>Directo</strong><span>contacto por WhatsApp</span></div>
+            <div><strong>Claro</strong><span>contenido ordenado</span></div>
+          </div>
         </div>
         <div class="about-panel">
-          <h3>Lo que cuidamos en cada pagina</h3>
+          <h3>Lo que cuidamos en cada página</h3>
           <ul>
-            <li>Diseno adaptable para celular, tablet y computador.</li>
-            <li>Textos claros para que el cliente entienda rapido tu oferta.</li>
+            <li>Diseño adaptable para celular, tablet y computador.</li>
+            <li>Textos claros para que el cliente entienda rápido tu oferta.</li>
             <li>Botones directos a WhatsApp, correo o redes sociales.</li>
             <li>Estructura lista para conectar con Netlify y GitHub.</li>
+            <li>Orden visual para que cada sección tenga una intención.</li>
           </ul>
         </div>
+      </div>
+      <div class="about-values">
+        <article>
+          <h3>Comunicación simple</h3>
+          <p>Te explico cada paso sin tecnicismos innecesarios, para que puedas aprobar textos, colores y secciones con tranquilidad.</p>
+        </article>
+        <article>
+          <h3>Enfoque comercial</h3>
+          <p>La página se arma pensando en lo que el cliente necesita ver antes de escribir: servicios, precios, beneficios, ejemplos y formas de contacto.</p>
+        </article>
+        <article>
+          <h3>Base lista para crecer</h3>
+          <p>Partimos con una web ordenada y después se pueden sumar nuevas secciones, catálogos, formularios o mejoras visuales.</p>
+        </article>
       </div>
     </section>
 
     <section class="section" id="servicios">
       <div class="section-heading">
-        <p class="eyebrow">Que puedo crear</p>
-        <h2>Una vitrina digital para que tu cliente confie antes de escribirte.</h2>
-        <p>Trabajo paginas estaticas y presentaciones web para negocios que necesitan verse serios, mostrar servicios, publicar productos o captar contactos.</p>
+        <p class="eyebrow">Qué puedo crear</p>
+        <h2>Una vitrina digital para que tu cliente confíe antes de escribirte.</h2>
+        <p>Trabajo páginas estáticas y presentaciones web para negocios que necesitan verse serios, mostrar servicios, publicar productos o captar contactos.</p>
       </div>
       <div class="service-grid">
         <article class="service-card">
           <span class="service-icon">01</span>
-          <h3>Paginas para negocios</h3>
-          <p>Inicio, descripcion, servicios, galeria, contacto y botones a WhatsApp o redes sociales.</p>
+          <h3>Páginas para negocios</h3>
+          <p>Inicio, descripción, servicios, galería, contacto y botones a WhatsApp o redes sociales.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">02</span>
-          <h3>Tiendas tipo catalogo</h3>
-          <p>Productos ordenados, precios, categorias y llamados para comprar o consultar directamente.</p>
+          <h3>Tiendas tipo catálogo</h3>
+          <p>Productos ordenados, precios, categorías y llamados para comprar o consultar directamente.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">03</span>
           <h3>Landing de ventas</h3>
-          <p>Una pagina enfocada en presentar una oferta, explicar beneficios y convertir visitas en contactos.</p>
+          <p>Una página enfocada en presentar una oferta, explicar beneficios y convertir visitas en contactos.</p>
         </article>
         <article class="service-card">
           <span class="service-icon">04</span>
           <h3>Mejoras visuales</h3>
-          <p>Renuevo paginas simples para que se vean mas limpias, actuales y faciles de recorrer.</p>
+          <p>Renuevo páginas simples para que se vean más limpias, actuales y fáciles de recorrer.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="section includes-section" id="incluye">
+      <div class="section-heading">
+        <p class="eyebrow">Qué incluye</p>
+        <h2>Una página lista para compartir, vender y responder rápido.</h2>
+        <p>Cada proyecto se adapta al rubro, pero siempre cuido una base clara para que el sitio no quede vacío ni improvisado.</p>
+      </div>
+      <div class="includes-grid">
+        <article><span>01</span><h3>Diseño responsive</h3><p>La página se adapta a celular, tablet y computador, con textos y botones cómodos de tocar.</p></article>
+        <article><span>02</span><h3>Botones de contacto</h3><p>WhatsApp, correo, Facebook o enlaces importantes para que el cliente llegue directo a ti.</p></article>
+        <article><span>03</span><h3>Contenido ordenado</h3><p>Secciones pensadas para explicar qué vendes, por qué confiar y cómo pedir información.</p></article>
+        <article><span>04</span><h3>Publicación web</h3><p>Estructura lista para trabajar con GitHub, Netlify y una versión pública actualizable.</p></article>
+        <article><span>05</span><h3>Ajustes básicos</h3><p>Revisión de detalles visuales, textos y enlaces antes de dejar la página lista.</p></article>
+        <article><span>06</span><h3>Estilo personalizado</h3><p>Colores, tono y secciones según el tipo de negocio: tienda, servicio, comida, belleza o marca personal.</p></article>
       </div>
     </section>
 
     <section class="band">
       <div class="band-content">
-        <p class="eyebrow">Por que elegir ImpulsaWeb</p>
-        <h2>Diseno bonito, mensaje claro y contacto facil.</h2>
+        <p class="eyebrow">Por qué elegir ImpulsaWeb</p>
+        <h2>Diseño bonito, mensaje claro y contacto fácil.</h2>
       </div>
       <div class="proof-list">
-        <p><strong>Confianza:</strong> una pagina bien presentada ayuda a que el cliente sienta que el negocio es serio.</p>
-        <p><strong>Claridad:</strong> organizo la informacion para que la persona entienda rapido que vendes y como contactarte.</p>
-        <p><strong>Enfoque:</strong> cada seccion tiene una intencion: mostrar, convencer o llevar al contacto.</p>
+        <p><strong>Confianza:</strong> una página bien presentada ayuda a que el cliente sienta que el negocio es serio.</p>
+        <p><strong>Claridad:</strong> organizo la información para que la persona entienda rápido qué vendes y cómo contactarte.</p>
+        <p><strong>Enfoque:</strong> cada sección tiene una intención: mostrar, convencer o llevar al contacto.</p>
       </div>
     </section>
 
     <section class="section process-section">
       <div class="section-heading">
-        <p class="eyebrow">Como trabajamos</p>
-        <h2>Un proceso simple para pasar de idea a pagina publicada.</h2>
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2>Un proceso simple para pasar de idea a página publicada.</h2>
       </div>
       <div class="process-grid">
         <article>
           <span>1</span>
           <h3>Conversamos tu idea</h3>
-          <p>Vemos que vendes, que informacion necesitas mostrar y cual es el objetivo de la pagina.</p>
+          <p>Vemos qué vendes, qué información necesitas mostrar y cuál es el objetivo de la página.</p>
         </article>
         <article>
           <span>2</span>
-          <h3>Armamos el diseno</h3>
+          <h3>Armamos el diseño</h3>
           <p>Se crea una estructura visual limpia, con colores, secciones y textos pensados para tu cliente.</p>
         </article>
         <article>
           <span>3</span>
           <h3>Publicamos y ajustamos</h3>
-          <p>Dejamos la pagina lista para compartir y hacemos ajustes finales si algo necesita mejorar.</p>
+          <p>Dejamos la página lista para compartir y hacemos ajustes finales si algo necesita mejorar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section before-after">
+      <div class="section-heading">
+        <p class="eyebrow">Antes y después</p>
+        <h2>La diferencia entre solo estar online y verse profesional.</h2>
+        <p>Este bloque ayuda a mostrarle al cliente por qué una web ordenada cambia la primera impresión del negocio.</p>
+      </div>
+      <div class="comparison-grid">
+        <article class="comparison-card before-card">
+          <span>Antes</span>
+          <h3>Información suelta</h3>
+          <p>Datos repartidos en redes, precios poco claros, fotos sin orden y contacto difícil de encontrar.</p>
+          <div class="mini-wireframe old-wireframe" aria-hidden="true"></div>
+        </article>
+        <article class="comparison-card after-card">
+          <span>Después</span>
+          <h3>Página clara y lista para vender</h3>
+          <p>Servicios, beneficios, precios, ejemplos y botones de contacto en un recorrido fácil de entender.</p>
+          <div class="mini-wireframe new-wireframe" aria-hidden="true"></div>
         </article>
       </div>
     </section>
@@ -145,7 +210,7 @@
       <div class="section-heading">
         <p class="eyebrow">Ejemplos de proyectos</p>
         <h2>Ideas que puedes mostrar a un cliente.</h2>
-        <p>Estos son formatos estaticos de ejemplo. Se pueden adaptar a rubros como ropa, comida, belleza, servicios, tecnologia o emprendimientos locales.</p>
+        <p>Estos son formatos estáticos de ejemplo. Cada demo tiene una estructura distinta para mostrar que la página se puede adaptar al rubro, no solo cambiar colores.</p>
       </div>
       <div class="portfolio-grid">
         <a class="project-card featured-project" href="tienda-demo.html">
@@ -153,17 +218,17 @@
             <span>Urban Norte</span>
           </div>
           <div class="project-info">
-            <h3>Tienda online tipo catalogo</h3>
+            <h3>Tienda online tipo catálogo</h3>
             <p>Ejemplo navegable con productos, oferta destacada y contacto visual.</p>
           </div>
         </a>
         <a class="project-card" href="cafe-bruma.html">
-          <div class="project-preview cafe-preview">
+          <div class="project-preview cafe-preview sidebar-preview">
             <span>Cafe Bruma</span>
           </div>
           <div class="project-info">
-            <h3>Cafeteria y delivery</h3>
-            <p>Menu, promociones, fotos de productos y botones de pedido.</p>
+            <h3>Cafetería con sidebar de menú</h3>
+            <p>Vista más completa con resumen lateral, categorías, horarios y pedidos.</p>
           </div>
         </a>
         <a class="project-card" href="salon-raiz.html">
@@ -172,7 +237,16 @@
           </div>
           <div class="project-info">
             <h3>Servicios de belleza</h3>
-            <p>Tratamientos, agenda, testimonios y presentacion de marca.</p>
+            <p>Tratamientos, agenda, testimonios y presentación de marca.</p>
+          </div>
+        </a>
+        <a class="project-card tech-project" href="servicio-tecnico.html">
+          <div class="project-preview tech-preview">
+            <span>FixPoint</span>
+          </div>
+          <div class="project-info">
+            <h3>Servicio técnico con diagnóstico</h3>
+            <p>Panel de servicios, pasos de reparación, garantías y formulario rápido.</p>
           </div>
         </a>
       </div>
@@ -182,7 +256,7 @@
       <div class="section-heading">
         <p class="eyebrow">Comentarios de clientes</p>
         <h2>Confianza antes de cerrar una venta.</h2>
-        <p>Estos comentarios son de nuestros clientes mas recientes</p>
+        <p>Estos comentarios son de nuestros clientes más recientes</p>
       </div>
       <div class="testimonial-grid">
         <article class="testimonial-card">
@@ -210,36 +284,36 @@
       <div class="section-heading">
         <p class="eyebrow">Precios conversables</p>
         <h2>Planes simples para partir sin enredarse.</h2>
-        <p>Los valores son referenciales y conversables segun cantidad de secciones, urgencia, contenido y detalles del diseno.</p>
+        <p>Los valores son referenciales y conversables según cantidad de secciones, urgencia, contenido y detalles del diseño.</p>
       </div>
       <div class="price-grid">
         <article class="price-card">
-          <h3>Pagina basica</h3>
+          <h3>Página básica</h3>
           <p class="price">Desde $45.000</p>
           <p>Ideal para presentar un negocio, servicio o perfil profesional.</p>
           <ul>
             <li>Hasta 4 secciones</li>
-            <li>Diseno responsive</li>
-            <li>Boton de contacto</li>
+            <li>Diseño responsive</li>
+            <li>Botón de contacto</li>
           </ul>
           <a class="btn btn-outline" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20consultar%20por%20una%20pagina%20basica." target="_blank" rel="noopener">Consultar</a>
         </article>
         <article class="price-card highlighted">
           <p class="badge">Mas pedido</p>
-          <h3>Pagina profesional</h3>
+          <h3>Página profesional</h3>
           <p class="price">Desde $75.000</p>
           <p>Para negocios que quieren verse mas completos y captar clientes.</p>
           <ul>
             <li>Hasta 7 secciones</li>
-            <li>Galeria o catalogo simple</li>
+            <li>Galería o catálogo simple</li>
             <li>Textos comerciales incluidos</li>
           </ul>
           <a class="btn btn-primary" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20cotizar%20una%20pagina%20profesional." target="_blank" rel="noopener">Cotizar</a>
         </article>
         <article class="price-card">
-          <h3>Tienda catalogo</h3>
+          <h3>Tienda catálogo</h3>
           <p class="price">Desde $110.000</p>
-          <p>Para mostrar productos con una presentacion moderna y clara.</p>
+          <p>Para mostrar productos con una presentación moderna y clara.</p>
           <ul>
             <li>Productos por categoria</li>
             <li>Ficha visual de productos</li>
@@ -252,21 +326,21 @@
 
     <section class="section company-info">
       <div class="section-heading">
-        <p class="eyebrow">Informacion importante</p>
-        <h2>Detalles normales que debe tener una pagina de empresa.</h2>
+        <p class="eyebrow">Información importante</p>
+        <h2>Detalles normales que debe tener una página de empresa.</h2>
       </div>
       <div class="info-grid">
         <article>
           <h3>Derechos de autor</h3>
-          <p>Los textos, disenos y recursos creados para cada proyecto pertenecen al cliente una vez entregado y pagado el trabajo acordado. No se copian marcas registradas ni contenido de terceros sin permiso.</p>
+          <p>Los textos, diseños y recursos creados para cada proyecto pertenecen al cliente una vez entregado y pagado el trabajo acordado. No se copian marcas registradas ni contenido de terceros sin permiso.</p>
         </article>
         <article>
           <h3>Contenido del cliente</h3>
-          <p>Fotos, logos, precios, productos, horarios y datos comerciales deben ser entregados o aprobados por el cliente para evitar informacion incorrecta.</p>
+          <p>Fotos, logos, precios, productos, horarios y datos comerciales deben ser entregados o aprobados por el cliente para evitar información incorrecta.</p>
         </article>
         <article>
           <h3>Soporte y cambios</h3>
-          <p>Los cambios menores se conversan antes de publicar. Ajustes grandes, nuevas secciones o redisenos se cotizan aparte y siempre con precio conversable.</p>
+          <p>Los cambios menores se conversan antes de publicar. Ajustes grandes, nuevas secciones o rediseños se cotizan aparte y siempre con precio conversable.</p>
         </article>
       </div>
     </section>
@@ -274,58 +348,140 @@
     <section class="section faq-section">
       <div class="section-heading">
         <p class="eyebrow">Preguntas frecuentes</p>
-        <h2>Respuestas rapidas antes de cotizar.</h2>
+        <h2>Respuestas rápidas antes de cotizar.</h2>
       </div>
       <div class="faq-list">
         <details>
-          <summary>Cuanto demora una pagina?</summary>
-          <p>Depende del tamano, pero una pagina simple puede estar lista en pocos dias si el contenido esta claro.</p>
+          <summary>¿Cuánto demora una página?</summary>
+          <p>Depende del tamaño, pero una página simple puede estar lista en pocos días si el contenido está claro.</p>
         </details>
         <details>
-          <summary>La pagina funciona en celular?</summary>
-          <p>Si. El diseno se adapta a pantallas pequenas para que el cliente pueda navegar desde el telefono sin problemas.</p>
+          <summary>¿La página funciona en celular?</summary>
+          <p>Sí. El diseño se adapta a pantallas pequeñas para que el cliente pueda navegar desde el teléfono sin problemas.</p>
         </details>
         <details>
-          <summary>Puedo pedir cambios despues?</summary>
-          <p>Si. Se pueden hacer ajustes menores y tambien cotizar mejoras nuevas cuando el negocio vaya creciendo.</p>
+          <summary>¿Puedo pedir cambios después?</summary>
+          <p>Sí. Se pueden hacer ajustes menores y también cotizar mejoras nuevas cuando el negocio vaya creciendo.</p>
+        </details>
+        <details>
+          <summary>¿Puedo partir con algo simple?</summary>
+          <p>Sí. Muchas páginas parten como presentación básica y luego crecen con catálogo, formulario, nuevas secciones o más ejemplos.</p>
         </details>
       </div>
     </section>
 
     <section class="contact-section" id="contacto">
       <div>
-        <p class="eyebrow">Contactame</p>
-        <h2>Cuentame tu idea y vemos un precio conversable.</h2>
-        <p>Si tienes un negocio, emprendimiento o servicio, puedo ayudarte a convertirlo en una pagina clara, bonita y lista para compartir.</p>
+        <p class="eyebrow">Contáctame</p>
+        <h2>Cuéntame tu idea y vemos un precio conversable.</h2>
+        <p>Si tienes un negocio, emprendimiento o servicio, puedo ayudarte a convertirlo en una página clara, bonita y lista para compartir.</p>
       </div>
       <div class="contact-card">
-        <label class="select-label" for="service-select">Que necesitas cotizar?</label>
+        <label class="select-label" for="service-select">¿Qué necesitas cotizar?</label>
         <select id="service-select" class="service-select">
-          <option value="pagina web">Pagina web para negocio</option>
-          <option value="tienda catalogo">Tienda tipo catalogo</option>
+          <option value="página web">Página web para negocio</option>
+          <option value="tienda catálogo">Tienda tipo catálogo</option>
           <option value="landing de ventas">Landing de ventas</option>
-          <option value="mejora visual">Mejora de una pagina existente</option>
+          <option value="servicio técnico">Página para servicio técnico</option>
+          <option value="mejora visual">Mejora de una página existente</option>
         </select>
         <a id="whatsapp-link" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20cotizar%20una%20pagina%20web." target="_blank" rel="noopener"><span>WhatsApp</span>+56 9 6613 0904</a>
         <a href="mailto:zunigamaximiliano156@gmail.com"><span>Correo</span>zunigamaximiliano156@gmail.com</a>
         <a href="https://www.facebook.com/maximiliano.guentrepan.9/" target="_blank" rel="noopener"><span>Facebook</span>Maximiliano Guentrepan</a>
       </div>
     </section>
+
+    <section class="section quote-section" aria-label="Formulario de cotización">
+      <div class="quote-copy">
+        <p class="eyebrow">Cotización rápida</p>
+        <h2>Completa una idea básica y manda el mensaje por WhatsApp.</h2>
+        <p>Este formulario deja listo un mensaje para conversar el proyecto con más contexto desde el inicio.</p>
+      </div>
+      <form class="quote-form" id="quote-form">
+        <label>
+          <span>Nombre o negocio</span>
+          <input id="quote-name" type="text" placeholder="Ej: Minimarket Los Pinos">
+        </label>
+        <label>
+          <span>Tipo de página</span>
+          <select id="quote-type">
+            <option>Página para negocio</option>
+            <option>Tienda catálogo</option>
+            <option>Landing de ventas</option>
+            <option>Servicio técnico</option>
+            <option>Mejora visual</option>
+          </select>
+        </label>
+        <label>
+          <span>Presupuesto aproximado</span>
+          <select id="quote-budget">
+            <option>Conversable</option>
+            <option>Hasta $50.000</option>
+            <option>$50.000 a $90.000</option>
+            <option>$90.000 a $140.000</option>
+            <option>Más de $140.000</option>
+          </select>
+        </label>
+        <label>
+          <span>Idea del proyecto</span>
+          <textarea id="quote-message" rows="4" placeholder="Cuéntame qué vendes, qué secciones necesitas o qué ejemplo te gustó."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>ImpulsaWeb Studio. Paginas web para negocios, tiendas y emprendedores. Todos los derechos reservados.</p>
+    <p>ImpulsaWeb Studio. Páginas web para negocios, tiendas y emprendedores. Todos los derechos reservados.</p>
     <a href="#top">Volver arriba</a>
   </footer>
+  <a class="floating-whatsapp" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20cotizar%20una%20pagina%20web." target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">WhatsApp</a>
   <script>
     const serviceSelect = document.querySelector("#service-select");
     const whatsappLink = document.querySelector("#whatsapp-link");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    const quoteForm = document.querySelector("#quote-form");
+    const floatingWhatsapp = document.querySelector(".floating-whatsapp");
 
     if (serviceSelect && whatsappLink) {
       serviceSelect.addEventListener("change", () => {
         const service = serviceSelect.value;
         const message = `Hola, quiero cotizar ${service}.`;
         whatsappLink.href = `https://wa.me/56966130904?text=${encodeURIComponent(message)}`;
+        if (floatingWhatsapp) {
+          floatingWhatsapp.href = whatsappLink.href;
+        }
+      });
+    }
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+
+    if (quoteForm) {
+      quoteForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.querySelector("#quote-name").value.trim() || "mi negocio";
+        const type = document.querySelector("#quote-type").value;
+        const budget = document.querySelector("#quote-budget").value;
+        const details = document.querySelector("#quote-message").value.trim() || "quiero conversar los detalles.";
+        const message = `Hola, soy de ${name}. Quiero cotizar: ${type}. Presupuesto aproximado: ${budget}. Idea: ${details}`;
+        window.open(`https://wa.me/56966130904?text=${encodeURIComponent(message)}`, "_blank", "noopener");
       });
     }
   </script>

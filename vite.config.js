@@ -8,7 +8,8 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         tiendaDemo: resolve(__dirname, "tienda-demo.html"),
         cafeBruma: resolve(__dirname, "cafe-bruma.html"),
-        salonRaiz: resolve(__dirname, "salon-raiz.html")
+        salonRaiz: resolve(__dirname, "salon-raiz.html"),
+        servicioTecnico: resolve(__dirname, "servicio-tecnico.html")
       }
     }
   }

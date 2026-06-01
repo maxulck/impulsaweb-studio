@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cafe Bruma | Demo cafeteria</title>
-  <meta name="description" content="Ejemplo estatico de pagina para cafeteria y delivery creado por ImpulsaWeb Studio.">
+  <meta name="description" content="Ejemplo estático de página para cafetería y delivery creado por ImpulsaWeb Studio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,8 +13,13 @@
 <body class="cafe-body">
   <header class="store-header">
     <a class="store-logo" href="cafe-bruma.html">Cafe Bruma</a>
-    <nav class="nav store-nav" aria-label="Navegacion cafeteria demo">
-      <a href="#menu">Menu</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="cafe-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav store-nav" id="cafe-nav" aria-label="Navegacion cafeteria demo">
+      <a href="#menu">Menú</a>
       <a href="#promo-cafe">Promo</a>
       <a href="#contacto-cafe">Contacto</a>
       <a href="index.html">Volver</a>
@@ -25,56 +30,71 @@
     <section class="demo-hero cafe-hero">
       <div class="demo-hero-text">
         <p class="eyebrow">Cafeteria demo</p>
-        <h1>Cafe de especialidad, pasteleria fresca y pedidos al instante.</h1>
-        <p>Una pagina ideal para cafeterias que quieren mostrar su carta, destacar productos y recibir pedidos por contacto directo.</p>
-        <a class="btn btn-primary" href="#menu">Ver menu</a>
+        <h1>Café de especialidad, pastelería fresca y pedidos al instante.</h1>
+        <p>Una página ideal para cafeterías que quieren mostrar su carta, destacar productos y recibir pedidos por contacto directo.</p>
+        <a class="btn btn-primary" href="#menu">Ver menú</a>
       </div>
       <div class="demo-showcase cafe-showcase" aria-label="Cafe y pasteleria"></div>
     </section>
 
-    <section class="store-categories cafe-categories" aria-label="Categorias cafe">
-      <span>Espresso</span>
-      <span>Latte</span>
-      <span>Pasteleria</span>
-      <span>Delivery</span>
-    </section>
-
-    <section class="section store-section" id="menu">
-      <div class="section-heading compact">
-        <p class="eyebrow">Menu destacado</p>
-        <h2>Favoritos de la casa</h2>
-      </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-art cafe-product-one"></div>
-          <h3>Latte Bruma</h3>
-          <p>Cafe suave con leche texturizada y toque de vainilla.</p>
-          <strong>$3.200</strong>
-        </article>
-        <article class="product-card">
-          <div class="product-art cafe-product-two"></div>
-          <h3>Capuccino Clasico</h3>
-          <p>Espresso intenso, espuma cremosa y cacao encima.</p>
-          <strong>$2.900</strong>
-        </article>
-        <article class="product-card">
-          <div class="product-art cafe-product-three"></div>
-          <h3>Cheesecake Frutos Rojos</h3>
-          <p>Porcion fresca, cremosa y perfecta para acompanar cafe.</p>
-          <strong>$4.500</strong>
-        </article>
-        <article class="product-card">
-          <div class="product-art cafe-product-four"></div>
-          <h3>Box Desayuno</h3>
-          <p>Cafe, sandwich, jugo y dulce del dia para llevar.</p>
-          <strong>$8.990</strong>
-        </article>
+    <section class="section menu-board" id="menu">
+      <aside class="demo-sidebar" aria-label="Resumen de cafeteria">
+        <p class="eyebrow">Carta rapida</p>
+        <h2>Menú con categorías claras.</h2>
+        <p>Este formato sirve para negocios con muchos productos, horarios y promociones visibles sin perder orden.</p>
+        <div class="sidebar-list">
+          <a href="#cafes">Cafes</a>
+          <a href="#pasteleria">Pasteleria</a>
+          <a href="#delivery">Delivery</a>
+        </div>
+        <div class="hours-box">
+          <span>Horario</span>
+          <strong>Lun a Sab</strong>
+          <p>09:00 a 20:00 hrs</p>
+        </div>
+      </aside>
+      <div class="menu-content">
+        <div class="section-heading compact">
+          <p class="eyebrow">Menú destacado</p>
+          <h2>Favoritos de la casa</h2>
+        </div>
+        <div class="menu-category" id="cafes">
+          <h3>Cafés preparados</h3>
+          <div class="menu-row"><span>Latte Bruma</span><strong>$3.200</strong></div>
+          <div class="menu-row"><span>Capuccino Clásico</span><strong>$2.900</strong></div>
+          <div class="menu-row"><span>Espresso doble</span><strong>$2.400</strong></div>
+        </div>
+        <div class="menu-category" id="pasteleria">
+          <h3>Pasteleria fresca</h3>
+          <div class="menu-row"><span>Cheesecake frutos rojos</span><strong>$4.500</strong></div>
+          <div class="menu-row"><span>Brownie nuez</span><strong>$3.400</strong></div>
+          <div class="menu-row"><span>Medialuna mantequilla</span><strong>$1.800</strong></div>
+        </div>
+        <div class="menu-category" id="delivery">
+          <h3>Combos para llevar</h3>
+          <div class="menu-row"><span>Box Desayuno</span><strong>$8.990</strong></div>
+          <div class="menu-row"><span>Pack oficina 4 cafés</span><strong>$10.990</strong></div>
+        </div>
+        <div class="product-grid compact-products">
+          <article class="product-card">
+            <div class="product-art cafe-product-one"></div>
+            <h3>Latte Bruma</h3>
+            <p>Café suave con leche texturizada y toque de vainilla.</p>
+            <strong>$3.200</strong>
+          </article>
+          <article class="product-card">
+            <div class="product-art cafe-product-three"></div>
+            <h3>Cheesecake Frutos Rojos</h3>
+            <p>Porcion fresca, cremosa y perfecta para acompanar cafe.</p>
+            <strong>$4.500</strong>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="promo cafe-promo" id="promo-cafe">
       <div>
-        <p class="eyebrow">Promo de manana</p>
+        <p class="eyebrow">Promo de mañana</p>
         <h2>Cafe + pastel desde $5.990.</h2>
         <p>Este espacio puede destacar ofertas, horarios, combos o productos nuevos para aumentar pedidos.</p>
       </div>
@@ -85,7 +105,7 @@
       <div>
         <p class="eyebrow">Contacto demo</p>
         <h2>Pedidos, reservas y consultas en un solo lugar.</h2>
-        <p>La pagina puede conectar directo a telefono, correo, Facebook, WhatsApp o Instagram.</p>
+        <p>La página puede conectar directo a teléfono, correo, Facebook, WhatsApp o Instagram.</p>
       </div>
       <div class="contact-card">
         <a href="https://wa.me/56966130904?text=Hola%2C%20quiero%20consultar%20por%20una%20pagina%20para%20cafeteria." target="_blank" rel="noopener"><span>WhatsApp</span>+56 9 6613 0904</a>
@@ -94,5 +114,27 @@
       </div>
     </section>
   </main>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+  </script>
 </body>
 </html>

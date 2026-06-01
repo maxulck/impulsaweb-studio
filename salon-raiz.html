@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Salon Raiz | Demo belleza</title>
-  <meta name="description" content="Ejemplo estatico de pagina para salon de belleza creado por ImpulsaWeb Studio.">
+  <meta name="description" content="Ejemplo estático de página para salón de belleza creado por ImpulsaWeb Studio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,7 +13,12 @@
 <body class="salon-body">
   <header class="store-header">
     <a class="store-logo" href="salon-raiz.html">Salon Raiz</a>
-    <nav class="nav store-nav" aria-label="Navegacion salon demo">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="salon-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav store-nav" id="salon-nav" aria-label="Navegacion salon demo">
       <a href="#servicios-salon">Servicios</a>
       <a href="#agenda">Agenda</a>
       <a href="#contacto-salon">Contacto</a>
@@ -26,17 +31,10 @@
       <div class="demo-hero-text">
         <p class="eyebrow">Salon demo</p>
         <h1>Belleza, cuidado capilar y reservas con una imagen elegante.</h1>
-        <p>Un ejemplo para peluquerias, barberias, centros de estetica o profesionales de belleza que necesitan presentar servicios y tomar horas.</p>
+        <p>Un ejemplo para peluquerías, barberías, centros de estética o profesionales de belleza que necesitan presentar servicios y tomar horas.</p>
         <a class="btn btn-primary" href="#servicios-salon">Ver servicios</a>
       </div>
       <div class="demo-showcase salon-showcase" aria-label="Servicios de belleza"></div>
-    </section>
-
-    <section class="store-categories salon-categories" aria-label="Categorias salon">
-      <span>Corte</span>
-      <span>Color</span>
-      <span>Tratamientos</span>
-      <span>Agenda</span>
     </section>
 
     <section class="section store-section" id="servicios-salon">
@@ -44,31 +42,45 @@
         <p class="eyebrow">Servicios destacados</p>
         <h2>Experiencia clara desde la primera visita</h2>
       </div>
-      <div class="product-grid">
-        <article class="product-card">
+      <div class="salon-services">
+        <article class="service-feature">
           <div class="product-art salon-product-one"></div>
           <h3>Corte y styling</h3>
-          <p>Asesoria de forma, lavado y peinado final.</p>
+          <p>Asesoría de forma, lavado, secado y peinado final para que el cliente entienda exactamente qué incluye el servicio.</p>
           <strong>Desde $12.990</strong>
         </article>
-        <article class="product-card">
-          <div class="product-art salon-product-two"></div>
-          <h3>Coloracion global</h3>
-          <p>Color uniforme con productos de cuidado capilar.</p>
-          <strong>Desde $34.990</strong>
-        </article>
-        <article class="product-card">
-          <div class="product-art salon-product-three"></div>
-          <h3>Hidratacion profunda</h3>
-          <p>Tratamiento para brillo, suavidad y reparacion.</p>
-          <strong>Desde $18.990</strong>
-        </article>
-        <article class="product-card">
-          <div class="product-art salon-product-four"></div>
-          <h3>Peinado evento</h3>
-          <p>Look especial para celebraciones, fotos o reuniones.</p>
-          <strong>Desde $22.990</strong>
-        </article>
+        <div class="service-list">
+          <article>
+            <span>Color</span>
+            <h3>Coloración global</h3>
+            <p>Color uniforme con productos de cuidado capilar.</p>
+            <strong>Desde $34.990</strong>
+          </article>
+          <article>
+            <span>Tratamiento</span>
+            <h3>Hidratación profunda</h3>
+            <p>Brillo, suavidad y reparacion para cabello seco.</p>
+            <strong>Desde $18.990</strong>
+          </article>
+          <article>
+            <span>Evento</span>
+            <h3>Peinado especial</h3>
+            <p>Look para celebraciones, fotos o reuniones.</p>
+            <strong>Desde $22.990</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section salon-gallery" aria-label="Resultados y experiencia">
+      <div class="section-heading compact">
+        <p class="eyebrow">Marca visual</p>
+        <h2>Secciones para mostrar confianza y resultados.</h2>
+      </div>
+      <div class="gallery-layout">
+        <div class="gallery-tile salon-product-two"><span>Color</span></div>
+        <div class="gallery-tile salon-product-three"><span>Tratamiento</span></div>
+        <div class="gallery-tile salon-product-four"><span>Evento</span></div>
       </div>
     </section>
 
@@ -84,8 +96,8 @@
     <section class="contact-section demo-contact" id="contacto-salon">
       <div>
         <p class="eyebrow">Contacto demo</p>
-        <h2>Mas reservas con una pagina clara y bonita.</h2>
-        <p>Una pagina asi ayuda a mostrar confianza, precios, servicios y formas de contacto sin depender solo de redes sociales.</p>
+        <h2>Más reservas con una página clara y bonita.</h2>
+        <p>Una página así ayuda a mostrar confianza, precios, servicios y formas de contacto sin depender solo de redes sociales.</p>
       </div>
       <div class="contact-card">
         <a href="https://wa.me/56966130904?text=Hola%2C%20quiero%20consultar%20por%20una%20pagina%20para%20salon%20de%20belleza." target="_blank" rel="noopener"><span>WhatsApp</span>+56 9 6613 0904</a>
@@ -94,5 +106,27 @@
       </div>
     </section>
   </main>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+  </script>
 </body>
 </html>

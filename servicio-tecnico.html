@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FixPoint | Demo servicio técnico</title>
+  <meta name="description" content="Ejemplo estático de página para servicio técnico creado por ImpulsaWeb Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tech-body">
+  <header class="store-header tech-header">
+    <a class="store-logo" href="servicio-tecnico.html">FixPoint</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="tech-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav store-nav" id="tech-nav" aria-label="Navegación servicio técnico demo">
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#reparaciones">Servicios</a>
+      <a href="#garantia">Garantía</a>
+      <a href="index.html">Volver</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="tech-hero">
+      <div class="tech-hero-copy">
+        <p class="eyebrow">Servicio técnico demo</p>
+        <h1>Reparaciones claras, tiempos visibles y contacto directo.</h1>
+        <p>Un ejemplo para negocios de reparación de celulares, computadores, consolas o equipos electrónicos que necesitan mostrar confianza desde el primer vistazo.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#diagnostico">Ver diagnóstico</a>
+          <a class="btn btn-secondary" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20consultar%20por%20una%20pagina%20para%20servicio%20tecnico." target="_blank" rel="noopener">Cotizar demo</a>
+        </div>
+      </div>
+      <div class="diagnostic-panel" aria-label="Panel de diagnóstico">
+        <div class="panel-top">
+          <span>Ticket #2481</span>
+          <strong>En revisión</strong>
+        </div>
+        <div class="device-card">
+          <span>Equipo</span>
+          <h2>Notebook Lenovo</h2>
+          <p>No enciende, revisión de placa y cargador.</p>
+        </div>
+        <div class="status-list">
+          <div><span></span>Recepción</div>
+          <div><span></span>Diagnóstico</div>
+          <div class="muted-step"><span></span>Presupuesto</div>
+          <div class="muted-step"><span></span>Entrega</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech-diagnostic" id="diagnostico">
+      <aside class="tech-sidebar">
+        <p class="eyebrow">Atención rápida</p>
+        <h2>Ideal para explicar procesos y evitar dudas.</h2>
+        <p>Este diseño muestra el estado del equipo, los servicios disponibles, tiempos estimados y un llamado directo a WhatsApp.</p>
+        <a class="btn btn-primary" href="https://wa.me/56966130904?text=Hola%2C%20quiero%20una%20pagina%20como%20FixPoint." target="_blank" rel="noopener">Pedir página similar</a>
+      </aside>
+      <div class="diagnostic-steps">
+        <article><span>01</span><h3>Recibimos el equipo</h3><p>Se registra el problema, datos del cliente y estado inicial.</p></article>
+        <article><span>02</span><h3>Revisamos y cotizamos</h3><p>El cliente recibe diagnóstico, precio y tiempo aproximado.</p></article>
+        <article><span>03</span><h3>Reparamos y probamos</h3><p>Se confirma funcionamiento antes de entregar.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="reparaciones">
+      <div class="section-heading compact">
+        <p class="eyebrow">Servicios frecuentes</p>
+        <h2>Bloques pensados para explicar precios, tiempos y garantías.</h2>
+      </div>
+      <div class="repair-grid">
+        <article><span class="repair-icon">Cel</span><h3>Cambio de pantalla</h3><p>Celulares y tablets con repuesto según modelo.</p><strong>Desde $29.990</strong></article>
+        <article><span class="repair-icon">PC</span><h3>Mantención notebook</h3><p>Limpieza interna, pasta térmica y revisión general.</p><strong>Desde $24.990</strong></article>
+        <article><span class="repair-icon">SSD</span><h3>Mejora de rendimiento</h3><p>Instalación de SSD, respaldo y configuración básica.</p><strong>Desde $39.990</strong></article>
+        <article><span class="repair-icon">SOS</span><h3>Diagnóstico express</h3><p>Revisión rápida para fallas comunes y presupuesto.</p><strong>Desde $9.990</strong></article>
+      </div>
+    </section>
+
+    <section class="tech-guarantee" id="garantia">
+      <div>
+        <p class="eyebrow">Garantía y confianza</p>
+        <h2>Una página así ayuda a que el cliente sepa qué esperar.</h2>
+        <p>Sirve para publicar horarios, ubicación, tiempos de entrega, condiciones de garantía y canales de contacto.</p>
+      </div>
+      <div class="guarantee-list">
+        <p><strong>Garantía escrita</strong><span>Condiciones visibles antes de reparar.</span></p>
+        <p><strong>Seguimiento</strong><span>Estados simples para cada equipo.</span></p>
+        <p><strong>Contacto directo</strong><span>WhatsApp para aprobar presupuesto.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav");
+
+    if (menuToggle && nav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
