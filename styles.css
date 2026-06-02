@@ -57,6 +57,11 @@ a {
   font-weight: 800;
 }
 
+.brand {
+  gap: 12px;
+  font-size: 18px;
+}
+
 .menu-toggle {
   display: none;
   width: 44px;
@@ -95,12 +100,18 @@ a {
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--teal), var(--blue));
+  width: 52px;
+  height: 48px;
+  overflow: hidden;
+  background: #050608;
   border-radius: 8px;
-  font-size: 14px;
+  box-shadow: 0 14px 28px rgba(47, 143, 131, 0.24);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .nav {
@@ -262,7 +273,7 @@ p {
 }
 
 .section {
-  padding: clamp(70px, 9vw, 118px) clamp(18px, 5vw, 70px);
+  padding: clamp(60px, 8vw, 96px) clamp(18px, 5vw, 70px);
 }
 
 .section-heading {
@@ -292,7 +303,7 @@ p {
 }
 
 .service-grid {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .service-card,
